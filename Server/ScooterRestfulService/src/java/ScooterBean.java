@@ -31,4 +31,27 @@ public class ScooterBean {
     public void addScooter(int id, double latitude, double longitude, boolean available) {
         scooters.add(new Scooter(id, latitude, longitude, available));
     }
+
+    public boolean removeScooter(int id) {
+        for (Scooter scooter : scooters) {
+            if (scooter.getId() == id) {
+                scooters.remove(scooter);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Collection<Scooter> getScooters() {
+        return scooters;
+    }
+
+    public void bookScooter(int id, boolean available) {
+        for (Scooter scooter : scooters) {
+            if (scooter.getId() == id) {
+                scooter.setAvailable(available);
+                return;
+            }
+        }
+    }
 }

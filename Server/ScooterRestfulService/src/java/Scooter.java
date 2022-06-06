@@ -1,6 +1,3 @@
-
-import java.io.Serializable;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -10,12 +7,15 @@ import java.io.Serializable;
  *
  * @author Brock
  */
-public class Scooter implements Serializable {
+public class Scooter {
   
     private int id;
     private double latitude;
     private double longitude;
     private boolean available;
+
+    public Scooter() {
+    }
 
     public Scooter(int id, double latitude, double longitude, boolean available) {
         setId(id);
@@ -62,8 +62,8 @@ public class Scooter implements Serializable {
         buffer.append("{");
         
         buffer.append("\"id\":").append(getId()).append(",");
-        buffer.append("\"latitude\":").append(getLatitude()).append(",");
-        buffer.append("\"longitude\":").append(getLongitude()).append(",");
+        buffer.append("\"lat\":").append(getLatitude()).append(",");
+        buffer.append("\"long\":").append(getLongitude()).append(",");
         buffer.append("\"isAvailable\":").append(isAvailable());
 
         buffer.append("}");
