@@ -22,10 +22,10 @@ public class ScooterBean {
     @PostConstruct
     public void init() {
         scooters = new ArrayList<Scooter>();
-        addScooter(1, 37.7833, 122.4167, true);
-        addScooter(2, 37.7833, -122.4167, false);
-        addScooter(3, -37.7833, 122.4167, true);
-        addScooter(4, -37.7833, -122.4167, false);
+        addScooter(1, -36.8495, 174.7592, true);
+        addScooter(2, -36.8488, 174.7646, false);
+        addScooter(3, -36.8541, 174.7673, true);
+        addScooter(4, -36.8514, 174.7617, false);
     }
 
     public void addScooter(int id, double latitude, double longitude, boolean available) {
